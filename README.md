@@ -1,0 +1,5 @@
+## React-Redux PropTypes `connect`
+
+I've been reading a lot about the idea of local component state backed by a global state. The general idea being you define state on the local component but it is backed up by another state source that is global, this could be client side, server side or a combination of both. The idea is that you gain all the pluses that come with global state (not having to update in many places, less side effects, etc...) while also gaining the pluses of local state (easy to see exactly what this component needs...). 
+
+React PropTypes serve a semi-similar purpose, it's a component level definition of the data that this component expects to receive through props. Utilizing the `connect` function provided by `react-redux` and PropTypes (though it doesn't for all intents and purposes need to be PropTypes) from `react` we can achieve something close to local component state backed by global state. The slice of state that each component received is directly defined by the PropTypes of that component. See the `src` folder for a very basic implementation.

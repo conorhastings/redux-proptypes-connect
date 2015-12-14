@@ -1,0 +1,25 @@
+{
+  "name": "redux-proptype-connect",
+  "version": "1.0.0",
+  "description": "use proptypes to supply data to connected components",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --watch --progress"
+  },
+  "author": "Conor Hastings",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "install": "^0.4.1",
+    "npm": "^3.5.2",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.1",
+    "redux": "^3.0.5",
+    "webpack": "^1.12.9"
+  }
+}
