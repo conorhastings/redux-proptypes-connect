@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import mapPropsFromPropTypes from './map-props-from-proptypes';
 
 const Animals = ({animals}) => {
   return (
@@ -15,11 +16,4 @@ Animals.propTypes = {
   animals: React.PropTypes.array.isRequired
 };
 
-const injectPropsFromPropTypes = (state) => {
-  let props = {};
-  const propTypes = Object.keys(Animals.propTypes);
-  propTypes.forEach(type => props[type] = state[type]);
-  return props;
-}
-
-export default connect(injectPropsFromPropTypes)(Animals);
+export default connect(mapPropsFromPropTypes(Animals))(Animals);

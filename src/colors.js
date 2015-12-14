@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import mapPropsFromPropTypes from './map-props-from-proptypes';
 
 const Colors = ({colors}) => {
   return (
@@ -15,12 +16,4 @@ Colors.propTypes = {
   colors: React.PropTypes.array.isRequired
 };
 
-const injectPropsFromPropTypes = (state) => {
-  let props = {};
-  // want to get this to a point where Component is passed in automagically
-  const propTypes = Object.keys(Colors.propTypes);
-  propTypes.forEach(type => props[type] = state[type]);
-  return props;
-}
-
-export default connect(injectPropsFromPropTypes)(Colors);
+export default connect(mapPropsFromPropTypes(Colors))(Colors);
