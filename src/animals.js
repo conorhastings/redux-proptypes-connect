@@ -1,5 +1,5 @@
 import React from 'react';
-import mapPropsFromPropTypes from './map-props-from-proptypes';
+import reduxConnectedPropTypes from 'redux-connected-proptypes';
 
 const Animals = ({animals}) => {
   return (
@@ -15,4 +15,4 @@ Animals.propTypes = {
   animals: React.PropTypes.array.isRequired
 };
 
-export default mapPropsFromPropTypes(Animals);
+export default reduxConnectedPropTypes(Animals);

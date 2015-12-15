@@ -1,5 +1,5 @@
 import React from 'react';
-import mapPropsFromPropTypes from './map-props-from-proptypes';
+import reduxConnectedPropTypes from 'redux-connected-proptypes';
 
 const Colors = ({colors}) => {
   return (
@@ -15,4 +15,4 @@ Colors.propTypes = {
   colors: React.PropTypes.array.isRequired
 };
 
-export default mapPropsFromPropTypes(Colors);
+export default reduxConnectedPropTypes(Colors);
